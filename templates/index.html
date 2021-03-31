@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<div class="content">
+    <h1> Student Ledger </h1>
+
+    <table>
+
+        <tr>
+            <th>Student ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date of Birth</th>
+            <th>Amount Due</th>
+        </tr>
+
+        {% for tasks in tasks %}
+
+        <tr>
+            <td>{{ task.content}} </td>
+            <td></td>
+            <td>
+                <a href =""> Delete Record</a>
+                <a href="">Update Record</a>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <form action="/" method="POST">
+        <input type="text" name="content" id="student_id">
+        <input type="text" name="content" id="first_name">
+        <input type="text" name="content" id="last_name">
+        <input type="text" name="content" id="amount_due">
+        <input type="text" name="content" id="dob">
+        <input type="submit" value="Add record">
+    
+    </form>
+</div>
+
+{% endblock %}
